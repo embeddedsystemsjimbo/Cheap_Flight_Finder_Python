@@ -1,6 +1,6 @@
 from data_manager import DataManager
 from flight_data import FlightData
-from twillio import TwillioSMS
+from notification_manager import NotificationManager
 
 WEEK_OFFSET = 24 # search interval in weeks ~ 6 months.
 MIN_RETURN_TIME_DAYS = 7  # 7 days min trip length
@@ -21,7 +21,7 @@ for current_fight in current_flight_data:
 
     message = f"Low Price alert! Only ${current_fight['price']}US to fly from {current_fight['from_location']}-" \
               f"{current_fight['from_IATA']} to {current_fight['to_location']}-{current_fight['to_IATA']} between " \
-              f" {current_fight['current_date']}  to  {current_fight['offset_date']}  "
+              f" {current_fight['current_date']} to {current_fight['offset_date']}"
 
     # send text message to phone
-    TwillioSMS(message)
+    NotificationManager(message)
