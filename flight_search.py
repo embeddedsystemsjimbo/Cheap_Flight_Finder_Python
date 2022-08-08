@@ -12,7 +12,7 @@ tequila_endpoint = "https://tequila-api.kiwi.com/v2/search"
 class FlightSearch:
 
     """
-        Get current flight information from Kiwi.com Tequilla API
+        Get current flight information from Kiwi.com Tequila API
             Parameters:
                 flight_from (str): Current location.
                 flight_to (str):  Destination location.
@@ -54,7 +54,7 @@ class FlightSearch:
         """
             Get one available flights for current flight object if price is lower than reference max price.
                 Return:
-                    self.__response (json): Returns available flight data from Tequilla API
+                    self.__response (json): Returns available flight data from Tequila API
         """
 
         return self.__response.json()
