@@ -1,6 +1,6 @@
 from data_manager import DataManager
 from flight_data import FlightData
-from Twillio import TwillioSMS
+from twillio import TwillioSMS
 
 WEEK_OFFSET = 24
 CURRENT_LOCATION = "LON"  # London GB city code
