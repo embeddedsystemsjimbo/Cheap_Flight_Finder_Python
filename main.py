@@ -2,13 +2,13 @@ from data_manager import DataManager
 from flight_data import FlightData
 from twillio import TwillioSMS
 
-WEEK_OFFSET = 24
-CURRENT_LOCATION = "LON"  # London GB city code
+WEEK_OFFSET = 24 # search interval in weeks ~ 6 months. 
+CURRENT_LOCATION = "LON"  # London GB city code ...default location.
 
-# get data from Google Sheets Reference Flight List
+# get data from Google Sheets Reference Flight List.
 reference_flight_data = DataManager().get_city_list()
 
-# get current available flights with prices
+# get current available flights with prices.
 current_flight_data = FlightData(reference_flight_data, CURRENT_LOCATION, WEEK_OFFSET).get_flight_data()
 
 for current_fight in current_flight_data:
