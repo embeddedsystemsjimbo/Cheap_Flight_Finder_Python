@@ -10,5 +10,5 @@ Figure 1: Google Sheet sample.
 
 ***
 
-![IMG_EB14B6B0D169-1](https://user-images.githubusercontent.com/76194492/183342456-fcf2df58-6a21-4ba0-a849-1d4d4fe6f6d3.jpeg)
+![IMG_5387FB04EB44-1](https://user-images.githubusercontent.com/76194492/183343141-3dae83f3-4762-4a49-81de-0b4c36176d0a.jpeg)
 Figure 2: Sample Text Message.
