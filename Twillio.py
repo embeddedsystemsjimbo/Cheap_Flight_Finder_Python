@@ -24,4 +24,4 @@ class TwillioSMS:
             to=destination_phone_number
         )
 
-        print(message.sid)
+  
