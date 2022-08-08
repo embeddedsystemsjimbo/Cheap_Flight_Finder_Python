@@ -19,19 +19,19 @@ class FlightSearch:
                 week_range (int): Interval in weeks from current date in which to search flight information.
     """
 
-    def __init__(self, flight_from, flights_to, week_range, price_to):
+    def __init__(self, flight_from, flights_to, week_range, price_to, min_return_time_days, max_return_time_days):
 
         self.__flight_from = flight_from,
         self.__flight_to = flights_to
         self.__price_to = price_to
 
-        # get current data
-        self.today = datetime.date.today()
-        self.__formatted_today = self.today.strftime("%d/%m/%Y")
+        # get current date
+        today = datetime.date.today()
+        self.__formatted_today = today.strftime("%d/%m/%Y")
 
-        # get offset data
-        self.offset_date = self.today + datetime.timedelta(weeks=week_range)
-        self.__formatted_offset_date = self.offset_date.strftime("%d/%m/%Y")
+        # get offset date
+        offset_date = today + datetime.timedelta(weeks=week_range)
+        self.__formatted_offset_date = offset_date.strftime("%d/%m/%Y")
 
         header = {
             "apikey": Tequilla_API_KEY
@@ -43,8 +43,11 @@ class FlightSearch:
             "date_from": self.__formatted_today,
             "data_to": self.__formatted_offset_date,
             "price_to": self.__price_to,
-            "limit": 1,
-            "curr": "USD"
+            "one_for_city": 1,
+            "curr": "USD",
+            "nights_in_dst_from": min_return_time_days,
+            "nights_in_dst_to": max_return_time_days,
+            "flight_type": "round"
         }
 
         self.__response = requests.get(url=tequila_endpoint, params=tequila_params, headers=header)
