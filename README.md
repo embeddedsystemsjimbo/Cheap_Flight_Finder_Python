@@ -1,7 +1,7 @@
 # Cheap_Flight_Finder_Python
 
 
-This app find the cheapestest available flights online using the Tequilla API, by seaching through a predetermined list of destinations stored as a Google Sheets document and accessed using the Sheety API (See Figure 1).  If flight is found that are cheaper than the historically lowest price, the app sends an SMS message to my phone using the Twillio API (See Figure 2).
+This Python app find the cheapest available flights online using the Tequila API, by searching through a predetermined list of destinations stored as a Google Sheets document and accessed using the Sheety API (See Figure 1).  If a flight is found that is cheaper than the historically lowest price for a given destination, the app sends an SMS message to my phone using the Twillio API (See Figure 2).
 
 ***
 
