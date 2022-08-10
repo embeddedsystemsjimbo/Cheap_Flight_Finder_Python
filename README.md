@@ -1,7 +1,7 @@
 # Cheap_Flight_Finder_Python
 
 
-This Python app finds the cheapest available flights online using the Tequila API. The API searches a predetermined list of destinations stored as a Google Sheets document and accesses them using the Sheety API (See Figure 1).
+This Python app finds the cheapest available flights online using kiwi.com and their Tequila API. The API searches a predetermined list of destinations stored as a Google Sheets document and accesses them using the Sheety API (See Figure 1).
 
 Flights are selected with a minimum trip duration of seven days and a maximum duration of thirty days.
 
